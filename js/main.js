@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ---------------------------
     const handleNavbarShadow = () => {
         if (!navbar) return;
+
         if (window.scrollY > 8) {
             navbar.classList.add("scrolled");
         } else {
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ---------------------------
     // Active link highlighting (based on scroll position)
     // ---------------------------
-    const sectionIds = ["home", "about", "services", "business-profile", "contact"];
+    const sectionIds = ["home", "about", "services", "process", "business-profile", "contact"];
     const sections = sectionIds
         .map((id) => document.getElementById(id))
         .filter(Boolean);
