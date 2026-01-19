@@ -22,19 +22,34 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
+            <!-- Left: Brand -->
             <a href="#home" class="nav-logo" aria-label="Blue Nautics Home">
                 <img src="assets/img/logo.png" alt="Blue Nautics Logo" />
                 <span>Blue Nautics</span>
             </a>
 
+            <!-- Center: Menu -->
+            <ul class="nav-menu nav-menu-centered" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#process" class="nav-link">Process</a></li>
+                <li><a href="#business-profile" class="nav-link">Business Profile</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Right: Mobile toggle -->
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+        </div>
 
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
+        <!-- Mobile menu (separate so desktop stays centered cleanly) -->
+        <div class="nav-mobile" id="navMobile" aria-hidden="true">
+            <ul class="nav-mobile-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#process" class="nav-link">Process</a></li>
@@ -47,8 +62,15 @@
     <!-- HERO / HOME -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <p class="hero-kicker">Bangladesh ↔ North America</p>
+
+            <!-- BIG LOGO FEATURED -->
+            <div class="hero-brand">
+                <img class="hero-logo" src="assets/img/logo.png" alt="Blue Nautics Logo" />
+                <p class="hero-company">BlueNautics LLC</p>
+            </div>
+
             <h1 class="hero-title">Global Sourcing & Business Development Solutions</h1>
+
             <p class="hero-subtitle">
                 We connect North American buyers with trusted partners in Bangladesh across apparel, jute,
                 and technology services — with clear communication, quality assurance, and end-to-end coordination.
