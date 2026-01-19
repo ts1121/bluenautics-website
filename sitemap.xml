@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Main single-page entry -->
   <url>
-    <loc>https://ts1121.github.io/bluenautics-website/</loc>
+    <loc>https://bluenautics.net/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Note:
-       Anchors (#about, #services, etc.) are not indexed as separate pages by search engines,
-       so we do NOT list them as separate URLs.
-  -->
 </urlset>
