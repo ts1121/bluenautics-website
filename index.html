@@ -1,126 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blue Nautics - Global Sourcing & Business Development Solutions</title>
-    <meta name="description" content="Blue Nautics connects North American buyers with trusted partners in Bangladesh for apparel sourcing, jute products, and tech solutions.">
-    
+    <meta name="description" content="Blue Nautics connects North American buyers with trusted partners in Bangladesh for apparel sourcing, jute products, and tech solutions." />
+
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Blue Nautics - Global Sourcing & Business Development">
-    <meta property="og:description" content="Cross-border sourcing and business development solutions connecting North America with Bangladesh.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourusername.github.io/bluenautics/">
-    <meta property="og:image" content="https://yourusername.github.io/bluenautics/assets/img/logo.png">
-    
-    <link rel="stylesheet" href="css/styles.css">
+    <meta property="og:title" content="Blue Nautics - Global Sourcing & Business Development" />
+    <meta property="og:description" content="Cross-border sourcing and business development solutions connecting North America with Bangladesh." />
+    <meta property="og:type" content="website" />
+
+    <!-- Update these once domain is live -->
+    <meta property="og:url" content="https://ts1121.github.io/bluenautics-website/" />
+    <meta property="og:image" content="https://ts1121.github.io/bluenautics-website/assets/img/logo.png" />
+
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
+    <a class="skip-link" href="#home">Skip to content</a>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="assets/img/logo.png" alt="Blue Nautics Logo">
+            <a href="#home" class="nav-logo" aria-label="Blue Nautics Home">
+                <img src="assets/img/logo.png" alt="Blue Nautics Logo" />
                 <span>Blue Nautics</span>
             </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="media.html" class="nav-link">Media</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#business-profile" class="nav-link">Business Profile</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- HERO / HOME -->
+    <section class="hero" id="home">
         <div class="hero-content">
+            <p class="hero-kicker">Bangladesh ↔ North America</p>
             <h1 class="hero-title">Global Sourcing & Business Development Solutions</h1>
-            <p class="hero-subtitle">Connecting North American buyers with trusted partners in Bangladesh across apparel, jute, and technology sectors</p>
-            <a href="mailto:talha.siddique@bluenautics.net" class="btn btn-primary">Get In Touch</a>
+            <p class="hero-subtitle">
+                We connect North American buyers with trusted partners in Bangladesh across apparel, jute,
+                and technology services — with clear communication, quality assurance, and end-to-end coordination.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="#services" class="btn btn-ghost">Explore Services</a>
+            </div>
+
+            <div class="hero-badges">
+                <div class="hero-badge">Trusted Partners</div>
+                <div class="hero-badge">Quality Assurance</div>
+                <div class="hero-badge">Cross-border Coordination</div>
+            </div>
         </div>
+
         <div class="hero-wave"></div>
     </section>
 
-    <!-- Services Overview -->
-    <section class="services-preview">
+    <!-- ABOUT -->
+    <section class="section" id="about">
         <div class="container">
-            <h2 class="section-title">What We Do</h2>
-            <div class="cards-grid">
-                <div class="card reveal">
-                    <div class="card-icon">👔</div>
-                    <h3>Apparel & RMG Sourcing</h3>
-                    <p>Comprehensive apparel sourcing solutions from design to delivery, connecting you with Bangladesh's world-class garment manufacturers.</p>
-                    <a href="services.html#apparel" class="card-link">Learn More →</a>
+            <div class="section-header">
+                <h2 class="section-title">About Blue Nautics</h2>
+                <p class="section-intro">
+                    Blue Nautics is built to make sourcing and business development between North America and Bangladesh
+                    simple, reliable, and transparent.
+                </p>
+            </div>
+
+            <div class="split">
+                <div class="split-card reveal">
+                    <h3>What we stand for</h3>
+                    <p>
+                        We believe global sourcing should be straightforward: clear communication, vetted suppliers,
+                        and consistent execution from first conversation to final delivery.
+                    </p>
+                    <p>
+                        Our focus is long-term partnerships — not one-off transactions.
+                    </p>
                 </div>
-                <div class="card reveal">
-                    <div class="card-icon">🌿</div>
-                    <h3>Jute Products</h3>
-                    <p>Sustainable jute product sourcing from Bangladesh, the world's leading jute producer. Quality eco-friendly solutions for your business.</p>
-                    <a href="services.html#jute" class="card-link">Learn More →</a>
+
+                <div class="split-card reveal">
+                    <h3>How we work</h3>
+                    <ul class="checklist">
+                        <li>Understand your requirements (specs, budget, timeline)</li>
+                        <li>Match you with the right partner(s) in Bangladesh</li>
+                        <li>Coordinate sampling, production, and QC checkpoints</li>
+                        <li>Support logistics alignment and delivery readiness</li>
+                    </ul>
                 </div>
-                <div class="card reveal">
-                    <div class="card-icon">💻</div>
-                    <h3>Tech & IT Solutions</h3>
-                    <p>Technology and IT service partnerships connecting North American businesses with skilled Bangladesh-based tech providers. Details coming soon.</p>
-                    <a href="services.html#tech" class="card-link">Learn More →</a>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card reveal">
+                    <div class="value-icon">🧭</div>
+                    <h3>Clarity</h3>
+                    <p>Clear updates and realistic timelines — no surprises.</p>
+                </div>
+                <div class="value-card reveal">
+                    <div class="value-icon">🛡️</div>
+                    <h3>Reliability</h3>
+                    <p>Vetted partners and consistent execution across projects.</p>
+                </div>
+                <div class="value-card reveal">
+                    <div class="value-icon">⚓</div>
+                    <h3>Ownership</h3>
+                    <p>We coordinate end-to-end so you can focus on your business.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Blue Nautics -->
+    <!-- SERVICES -->
+    <section class="section section-alt" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Services</h2>
+                <p class="section-intro">
+                    We provide sourcing and business development support across three core verticals.
+                </p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card reveal" id="apparel">
+                    <div class="card-icon">👔</div>
+                    <h3>Apparel & RMG Sourcing</h3>
+                    <p>
+                        Comprehensive apparel sourcing support — from partner matching and sampling to production
+                        coordination and QC readiness.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Factories</span>
+                        <span class="tag">Sampling</span>
+                        <span class="tag">QC</span>
+                        <span class="tag">Delivery Coordination</span>
+                    </div>
+                </div>
+
+                <div class="card reveal" id="jute">
+                    <div class="card-icon">🌿</div>
+                    <h3>Jute Products</h3>
+                    <p>
+                        Sustainable jute product sourcing from Bangladesh — a world leader in jute production.
+                        Eco-friendly product options for modern supply chains.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Eco</span>
+                        <span class="tag">Bulk Orders</span>
+                        <span class="tag">Custom Specs</span>
+                    </div>
+                </div>
+
+                <div class="card reveal" id="tech">
+                    <div class="card-icon">💻</div>
+                    <h3>Tech & IT Solutions</h3>
+                    <p>
+                        Technology service partnerships connecting North American businesses with skilled Bangladesh-based teams.
+                        More details coming soon.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Web</span>
+                        <span class="tag">Software</span>
+                        <span class="tag">Support</span>
+                        <span class="tag">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-mini reveal">
+                <h3>Not sure where to start?</h3>
+                <p>Tell us what you’re sourcing, and we’ll guide you to the right next step.</p>
+                <a class="btn btn-primary" href="#contact">Start a Conversation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUSINESS PROFILE (formerly Media) -->
+    <section class="section" id="business-profile">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Business Profile</h2>
+                <p class="section-intro">
+                    A quick overview of our focus, operating model, and what you can expect when working with us.
+                </p>
+            </div>
+
+            <div class="profile-grid">
+                <div class="profile-card reveal">
+                    <h3>Primary Markets</h3>
+                    <p>United States & Canada</p>
+                </div>
+
+                <div class="profile-card reveal">
+                    <h3>Core Regions</h3>
+                    <p>Bangladesh (partner network and sourcing base)</p>
+                </div>
+
+                <div class="profile-card reveal">
+                    <h3>Operating Model</h3>
+                    <p>Sourcing + business development intermediary and coordination partner</p>
+                </div>
+
+                <div class="profile-card reveal">
+                    <h3>What You Get</h3>
+                    <p>Partner matching, coordination, quality oversight readiness, and clear communication</p>
+                </div>
+            </div>
+
+            <div class="business-note reveal">
+                <p>
+                    <strong>Note:</strong> We’re actively expanding our Business Profile section with a short company deck and
+                    video introduction. For now, feel free to contact us for a quick intro call.
+                </p>
+                <a class="btn btn-secondary" href="#contact">Request a Quick Intro</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY BLUE NAUTICS -->
     <section class="why-section">
         <div class="container">
             <h2 class="section-title">Why Blue Nautics</h2>
-            <p class="section-intro">Your trusted partner for cross-border business development between North America and Bangladesh</p>
+            <p class="section-intro">
+                Your trusted partner for cross-border business development between North America and Bangladesh.
+            </p>
+
             <div class="why-grid">
                 <div class="why-item reveal">
                     <div class="why-number">01</div>
                     <h3>Trusted Network</h3>
-                    <p>Vetted partner network across Bangladesh ensuring reliable, quality-driven partnerships for your sourcing needs.</p>
+                    <p>Vetted partner network across Bangladesh ensuring reliable, quality-driven partnerships.</p>
                 </div>
                 <div class="why-item reveal">
                     <div class="why-number">02</div>
                     <h3>Quality Assurance</h3>
-                    <p>Rigorous quality control processes at every stage, from fabric selection to final inspection and shipment.</p>
+                    <p>Quality checkpoints and practical coordination throughout the sourcing lifecycle.</p>
                 </div>
                 <div class="why-item reveal">
                     <div class="why-number">03</div>
                     <h3>Clear Communication</h3>
-                    <p>Seamless coordination across time zones with responsive, transparent communication throughout your project lifecycle.</p>
+                    <p>Transparent updates across time zones with responsive coordination.</p>
                 </div>
                 <div class="why-item reveal">
                     <div class="why-number">04</div>
                     <h3>North America Focus</h3>
-                    <p>Dedicated coverage across the United States and Canada, understanding regional market requirements and compliance standards.</p>
+                    <p>Market-aware sourcing support aligned with North American requirements.</p>
                 </div>
                 <div class="why-item reveal">
                     <div class="why-number">05</div>
                     <h3>On-Time Coordination</h3>
-                    <p>Meticulous timeline management and logistics coordination ensuring your products arrive when you need them.</p>
+                    <p>Timeline management and logistics readiness for predictable delivery.</p>
                 </div>
                 <div class="why-item reveal">
                     <div class="why-number">06</div>
                     <h3>End-to-End Support</h3>
-                    <p>Comprehensive service from initial concept and design through production, quality control, and final delivery.</p>
+                    <p>From requirements to partner matching to production support and delivery alignment.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
         <div class="container">
-            <h2>Ready to Start Your Next Project?</h2>
-            <p>Connect with our team to explore sourcing opportunities in Bangladesh</p>
-            <a href="mailto:talha.siddique@bluenautics.net" class="btn btn-secondary">Contact Us Today</a>
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-intro">
+                    Tell us what you’re looking to source or build — we’ll respond with next steps.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card reveal">
+                    <div class="contact-header">
+                        <h3>Primary Contact</h3>
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-name">Talha Siddique</p>
+                        <p class="contact-role">Founder, Blue Nautics</p>
+
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <div>
+                                    <strong>Email</strong>
+                                    <a href="mailto:talha.siddique@bluenautics.net">talha.siddique@bluenautics.net</a><br />
+                                    <a href="mailto:info@bluenautics.net">info@bluenautics.net</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">🌎</span>
+                                <div>
+                                    <strong>Coverage</strong>
+                                    <p>United States & Canada</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="btn btn-primary contact-btn" href="mailto:talha.siddique@bluenautics.net?subject=Blue%20Nautics%20Inquiry">
+                            Email Us
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-card reveal">
+                    <div class="contact-header">
+                        <h3>What can we help with?</h3>
+                    </div>
+                    <div class="contact-info">
+                        <div class="topic-list">
+                            <div class="topic-item">
+                                <h4>Apparel / RMG</h4>
+                                <p>Factory matching, sampling, production coordination, QC readiness.</p>
+                            </div>
+                            <div class="topic-item">
+                                <h4>Jute Products</h4>
+                                <p>Eco-friendly sourcing options and bulk coordination.</p>
+                            </div>
+                            <div class="topic-item">
+                                <h4>Tech / IT</h4>
+                                <p>Service partnerships and delivery coordination (coming soon).</p>
+                            </div>
+                        </div>
+
+                        <a class="btn btn-secondary contact-btn" href="#services">View Services</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section cta-compact reveal">
+                <div class="container">
+                    <h2>Ready to Start Your Next Project?</h2>
+                    <p>Let’s discuss what you need — we’ll help you move from idea to execution.</p>
+                    <a href="mailto:talha.siddique@bluenautics.net" class="btn btn-secondary">Contact Us Today</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -129,28 +356,31 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="assets/img/logo.png" alt="Blue Nautics Logo" class="footer-logo">
+                    <img src="assets/img/logo.png" alt="Blue Nautics Logo" class="footer-logo" />
                     <p class="footer-tagline">Global sourcing and business development solutions.</p>
                 </div>
+
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4>Navigation</h4>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="media.html">Media</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#business-profile">Business Profile</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
+
                     <div class="footer-column">
                         <h4>Services</h4>
                         <ul>
-                            <li><a href="services.html#apparel">Apparel Sourcing</a></li>
-                            <li><a href="services.html#jute">Jute Products</a></li>
-                            <li><a href="services.html#tech">Tech Solutions</a></li>
+                            <li><a href="#apparel">Apparel Sourcing</a></li>
+                            <li><a href="#jute">Jute Products</a></li>
+                            <li><a href="#tech">Tech Solutions</a></li>
                         </ul>
                     </div>
+
                     <div class="footer-column">
                         <h4>Contact</h4>
                         <ul>
@@ -160,6 +390,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2025 Blue Nautics. All rights reserved.</p>
             </div>
