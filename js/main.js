@@ -1,116 +1,116 @@
-// js/main.js
-document.addEventListener("DOMContentLoaded", function () {
-  // -----------------------------
-  // Mobile nav toggle
-  // -----------------------------
-  const navToggle = document.getElementById("navToggle");
-  const navMenu = document.getElementById("navMenu");
-  const navLinks = document.querySelectorAll(".nav-link");
+// Blue Nautics - main.js (Single-page behavior)
 
-  if (navToggle && navMenu) {
-    navToggle.addEventListener("click", function () {
-      navMenu.classList.toggle("active");
-    });
+document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.getElementById("navbar");
+    const navToggle = document.getElementById("navToggle");
+    const navMenu = document.getElementById("navMenu");
+    const navLinks = document.querySelectorAll(".nav-link");
 
-    // Close mobile menu when a link is clicked (only if menu is open)
-    navLinks.forEach((link) => {
-      link.addEventListener("click", function () {
-        if (navMenu.classList.contains("active")) {
-          navMenu.classList.remove("active");
+    // ---------------------------
+    // Sticky navbar shadow on scroll
+    // ---------------------------
+    const handleNavbarShadow = () => {
+        if (!navbar) return;
+        if (window.scrollY > 8) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
         }
-      });
-    });
-
-    // Close menu when clicking outside the nav
-    document.addEventListener("click", function (e) {
-      const clickedInsideNav =
-        navMenu.contains(e.target) || navToggle.contains(e.target);
-      if (!clickedInsideNav && navMenu.classList.contains("active")) {
-        navMenu.classList.remove("active");
-      }
-    });
-  }
-
-  // -----------------------------
-  // Active nav link highlighting
-  // -----------------------------
-  // Works for:
-  // - local testing (index.html)
-  // - GitHub Pages project URLs (.../repo/index.html)
-  // - Custom domain (/index.html)
-  const path = window.location.pathname;
-  const currentPage = path.split("/").pop() || "index.html";
-
-  navLinks.forEach((link) => {
-    const href = link.getAttribute("href");
-    if (!href) return;
-
-    // Normalize home link
-    const normalizedHref = href === "/" ? "index.html" : href;
-
-    if (normalizedHref === currentPage) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
-  });
-
-  // -----------------------------
-  // Navbar scroll style (safe-guarded)
-  // -----------------------------
-  const navbar = document.getElementById("navbar");
-  if (navbar) {
-    window.addEventListener("scroll", function () {
-      navbar.classList.toggle("scrolled", window.scrollY > 50);
-    });
-  }
-
-  // -----------------------------
-  // Scroll reveal (debounced)
-  // -----------------------------
-  const revealElements = document.querySelectorAll(".reveal");
-
-  function revealOnScroll() {
-    const windowHeight = window.innerHeight;
-    const revealPoint = 80; // smaller = reveals later; larger = reveals earlier
-
-    revealElements.forEach((el) => {
-      const rectTop = el.getBoundingClientRect().top;
-      if (rectTop < windowHeight - revealPoint) {
-        el.classList.add("active");
-      }
-    });
-  }
-
-  function debounce(fn, delay) {
-    let timer = null;
-    return function () {
-      if (timer) clearTimeout(timer);
-      timer = setTimeout(fn, delay);
     };
-  }
 
-  const debouncedReveal = debounce(revealOnScroll, 10);
-  window.addEventListener("scroll", debouncedReveal);
-  revealOnScroll(); // run once on load
+    window.addEventListener("scroll", handleNavbarShadow);
+    handleNavbarShadow();
 
-  // -----------------------------
-  // Media page: show video if it loads; otherwise keep "coming soon"
-  // -----------------------------
-  const video = document.querySelector("video.profile-video");
-  const overlay = document.querySelector(".coming-soon-overlay");
+    // ---------------------------
+    // Mobile nav toggle
+    // ---------------------------
+    const closeMobileMenu = () => {
+        if (!navToggle || !navMenu) return;
+        navToggle.classList.remove("active");
+        navMenu.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", "false");
+    };
 
-  if (video && overlay) {
-    // If the file exists and loads, show it
-    video.addEventListener("loadeddata", function () {
-      overlay.style.display = "none";
-      video.style.display = "block";
+    const openMobileMenu = () => {
+        if (!navToggle || !navMenu) return;
+        navToggle.classList.add("active");
+        navMenu.classList.add("active");
+        navToggle.setAttribute("aria-expanded", "true");
+    };
+
+    if (navToggle) {
+        navToggle.addEventListener("click", () => {
+            const isOpen = navMenu.classList.contains("active");
+            if (isOpen) closeMobileMenu();
+            else openMobileMenu();
+        });
+    }
+
+    // Close mobile menu when clicking a nav link
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            closeMobileMenu();
+        });
     });
 
-    // If the file is missing/unloadable, keep overlay visible
-    video.addEventListener("error", function () {
-      overlay.style.display = "flex";
-      video.style.display = "none";
+    // Close menu on Escape
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            closeMobileMenu();
+        }
     });
-  }
+
+    // ---------------------------
+    // Scroll Reveal
+    // ---------------------------
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealOnScroll = () => {
+        const triggerPoint = window.innerHeight * 0.88;
+
+        revealElements.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < triggerPoint) {
+                el.classList.add("active");
+            }
+        });
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+
+    // ---------------------------
+    // Active link highlighting (based on scroll position)
+    // ---------------------------
+    const sectionIds = ["home", "about", "services", "business-profile", "contact"];
+    const sections = sectionIds
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+
+    const setActiveLink = (id) => {
+        navLinks.forEach((link) => {
+            const href = link.getAttribute("href");
+            if (href === `#${id}`) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
+    };
+
+    const handleActiveSection = () => {
+        const scrollPos = window.scrollY + 120; // offset for sticky navbar
+        let current = "home";
+
+        sections.forEach((section) => {
+            if (section.offsetTop <= scrollPos) {
+                current = section.id;
+            }
+        });
+
+        setActiveLink(current);
+    };
+
+    window.addEventListener("scroll", handleActiveSection);
+    handleActiveSection();
 });
